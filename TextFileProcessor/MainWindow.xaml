@@ -1,0 +1,24 @@
+﻿<Window x:Class="TextFileProcessor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextFileProcessor"
+        mc:Ignorable="d"
+        Title="Bank Details Extract" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="20191219_095203.jpg"/>
+        </Grid.Background>
+        <Label x:Name="InputFolder" Content="Input Folder" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,40,0,0" Width="153" FontSize="18" Background="#FFF7F1F1" FontFamily="Arial Black"/>
+        <Label x:Name="OutputFolder" Content="Output Folder" HorizontalAlignment="Left" Margin="50,109,0,0" VerticalAlignment="Top" Width="153" Background="#FFFEF3F3" Height="36" FontSize="18" FontFamily="Arial Black"/>
+        <Button x:Name="UploadInput" Content="Browse" HorizontalAlignment="Left" Margin="670,40,0,0" VerticalAlignment="Top" Width="75" Height="34" Click="Button_Click" FontSize="16" FontFamily="Arial Black"/>
+        <Button x:Name="UploadOutput" Content="Browse" HorizontalAlignment="Left" Height="36" Margin="670,109,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontFamily="Arial Black" Click="UploadOutput_Click"/>
+        <TextBox x:Name="txtInputPath" HorizontalAlignment="Left" Height="34" Margin="250,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" />
+        <TextBox x:Name="txtOutputPath" HorizontalAlignment="Left" Height="36" Margin="250,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" />
+        <Button Content="Generate Summary" HorizontalAlignment="Left" Margin="173,190,0,0" VerticalAlignment="Top" Width="187" Height="40" FontFamily="Arial Black" FontWeight="Bold" FontSize="16" Click="Button_Click_1" Background="#FFF6F5F5"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="545,190,0,0" VerticalAlignment="Top" Width="135" Height="40" FontSize="16" FontFamily="Arial Black" Click="Button_Click_2"/>
+        <TextBlock x:Name="SummaryTextBlock" HorizontalAlignment="Left" Margin="50,255,0,0" TextWrapping="Wrap" Text="Summary:" VerticalAlignment="Top" Height="156" Width="260" FontFamily="Global Serif" FontSize="16" Foreground="#FFCB2C2C"/>
+
+    </Grid>
+</Window>
