@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01E6604F-1E20-4886-AFE5-56CECC5BB1C1}</ProjectGuid>
+    <ProjectGuid>{50BCA9E0-DA17-4D91-9A35-3D4E0EF25298}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TextFileProcessor</RootNamespace>
-    <AssemblyName>TextFileProcessor</AssemblyName>
+    <RootNamespace>CharacterRecognition</RootNamespace>
+    <AssemblyName>CharacterRecognition</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,11 +38,27 @@
     <ApplicationIcon>4501550-fishing-icon-png-75826-free-icons-library-people-helping-fish-png-401_512.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Azure.CognitiveServices.Vision.ComputerVision, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.5.0.0\lib\net452\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.18\lib\net452\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.Azure.3.3.18\lib\net452\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
       <HintPath>..\packages\Ookii.Dialogs.1.0\lib\net35\Ookii.Dialogs.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -69,8 +85,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BankDetails.cs" />
-    <Compile Include="ITestInterfaceMainWindow.cs" />
+    <Compile Include="FileProcessor.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -104,13 +119,70 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="20191219_095203.jpg" />
+    <Resource Include="IMG_20190724_115318.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG-20200217-WA0032.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Peach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="download.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="4501550-fishing-icon-png-75826-free-icons-library-people-helping-fish-png-401_512.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="icons8-mouse-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-close-window-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rounded Corner Window Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="721166713.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="3871216572.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Plain-Neon-Green-Backgrounds-24537-SUPERCOLOR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-cancel-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-cancel-480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2670542626.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wall-sunlit-ystad-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="red-texture-texture-wall-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="154785450.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="abstract-wall-texture-cement-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="photography-landscape-nature-water-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="art-background-blank-canvas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="abandoned-abstract-aged-aging.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

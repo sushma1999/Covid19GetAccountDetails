@@ -86,7 +86,7 @@ namespace TextFileProcessor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Concat(ex.Message.ToString(),ex.StackTrace.ToString()));
+                MessageBox.Show(string.Concat(ex.Message.ToString(), ex.StackTrace.ToString()));
             }
             finally
             {
@@ -216,10 +216,10 @@ namespace TextFileProcessor
         private void getAccountNo(string fullText)
         {
             Regex regex;
-            if (!string.IsNullOrWhiteSpace(bankdetail.IFSCCode) && bankdetail.IFSCCode.StartsWith("IDIB"))
-                regex = new Regex("^[0-9]{10,16}$");
-            else
-                regex = new Regex("^[0-9]{11,16}$");
+            //if (!string.IsNullOrWhiteSpace(bankdetail.IFSCCode) && bankdetail.IFSCCode.Contains("IDIB"))
+            //    regex = new Regex("^[0-9]{10,16}$");
+            //else
+            regex = new Regex("^[0-9]{10,16}$");
             foreach (var word in fullText.Split(' '))
             {
                 Match match = regex.Match(word.Trim());

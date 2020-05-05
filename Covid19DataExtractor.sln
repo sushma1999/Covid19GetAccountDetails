@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterRecognition", "CharacterRecognition\CharacterRecognition.csproj", "{50BCA9E0-DA17-4D91-9A35-3D4E0EF25298}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToTextConverter", "CharacterRecognition\ImageToTextConverter.csproj", "{50BCA9E0-DA17-4D91-9A35-3D4E0EF25298}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFileProcessor", "TextFileProcessor\TextFileProcessor.csproj", "{01E6604F-1E20-4886-AFE5-56CECC5BB1C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPOC", "Lear\DesignPOC.csproj", "{91E6447E-D3DB-4A30-961C-140299D29F55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{01E6604F-1E20-4886-AFE5-56CECC5BB1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01E6604F-1E20-4886-AFE5-56CECC5BB1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01E6604F-1E20-4886-AFE5-56CECC5BB1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E6447E-D3DB-4A30-961C-140299D29F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E6447E-D3DB-4A30-961C-140299D29F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E6447E-D3DB-4A30-961C-140299D29F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E6447E-D3DB-4A30-961C-140299D29F55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

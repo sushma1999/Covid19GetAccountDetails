@@ -6,24 +6,35 @@
         xmlns:local="clr-namespace:CharacterRecognition"
         mc:Ignorable="d"
         Title="Covid19 Passbook Image Reader" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid Margin="0,0,0.333,-19.333">
+    <Grid Margin="0,-26,0.333,16.667">
+        <Grid.Effect>
+            <DropShadowEffect/>
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="download.jpg"/>
+            <ImageBrush ImageSource="abstract-wall-texture-cement-wallpaper-preview.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="ImagePath" Content="Path of Image folder" HorizontalAlignment="Left" Height="40" Margin="10,60,0,0" VerticalAlignment="Top" Width="270" FontSize="24" Grid.Column="1" Background="#FFD7D921" FontFamily="Cooper Black"/>
-        <TextBox x:Name="ImageFolder" HorizontalAlignment="Left" Height="40" Margin="325,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Grid.Column="1"/>
-        <TextBlock x:Name="OutputTextBlock" HorizontalAlignment="Left" Margin="395,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="59" Width="388" Foreground="#FFCDCF2D" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" Grid.Column="1" FontFamily="Century"><Run Background="#FF3E2626"/></TextBlock>
-        <Button Content="Generate Text File" HorizontalAlignment="Left" Margin="142,171,0,0" VerticalAlignment="Top" Click="Button_Click" FontSize="14" Width="199" Height="37" Grid.Column="1" FontFamily="Gill Sans Ultra Bold"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="459,171,0,0" VerticalAlignment="Top" Width="252" Height="43" FontSize="14" Grid.Column="1" Click="Button_Click_1" FontFamily="Gill Sans Ultra Bold"/>
-        <Label x:Name="OutputPath" Content="Path of Output folder" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="270" FontSize="22" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" Background="#FFE0E21A" FontFamily="Cooper Black"/>
+        <Label x:Name="ImagePath" Content="Path of Image folder" HorizontalAlignment="Left" Height="60" Margin="10,57,0,0" VerticalAlignment="Top" Width="270" FontSize="24" Grid.Column="1" FontFamily="Cooper Black" Background="{x:Null}" Foreground="#FFFAF2F2"/>
+        <TextBox x:Name="ImageFolder" HorizontalAlignment="Left" Height="40" Margin="300,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Grid.Column="1" />
+        <TextBlock x:Name="OutputTextBlock" HorizontalAlignment="Left" Margin="367,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="119" Width="388" Foreground="White" Grid.Column="1" FontFamily="Cooper Black" FontSize="20"><Run Text="Summary :">
+                <Run.Background>
+                    <ImageBrush/>
+                </Run.Background>
+            </Run></TextBlock>
+        <Button Content="Generate Text File" HorizontalAlignment="Left" Margin="300,212,0,0" VerticalAlignment="Top" Click="Button_Click" FontSize="14" Width="199" Height="37" Grid.Column="1" FontFamily="Gill Sans Ultra Bold" Foreground="#FFFAF6F6" Background="{x:Null}" BorderBrush="#FFFFFEFE"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="645,205,0,0" VerticalAlignment="Top" Width="65" Height="44" FontSize="14" Grid.Column="1" Click="Button_Click_1" FontFamily="Gill Sans Ultra Bold" Background="{x:Null}" BorderThickness="1" Foreground="#FFFFF5F5"/>
+        <Label x:Name="OutputPath" Content="Path of Output folder" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Width="270" FontSize="22" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontFamily="Cooper Black" Height="56" Background="{x:Null}" Foreground="#FFF3E0E0"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="120,-69,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="OutputFolder" HorizontalAlignment="Left" Height="39" Margin="325,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Grid.Column="1"/>
-        <Button x:Name="browse1" Grid.ColumnSpan="2" Content="Browse" HorizontalAlignment="Left" Margin="705,60,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="Button_Click_2" FontFamily="Gill Sans Ultra Bold Condensed"/>
-        <Button x:Name="Browse2" Grid.ColumnSpan="2" Content="Browse" HorizontalAlignment="Left" Margin="705,112,0,0" VerticalAlignment="Top" Width="75" Height="42" RenderTransformOrigin="0.529,0.944" FontFamily="Gill Sans Ultra Bold" Click="Browse2_Click"/>
+        <TextBox x:Name="OutputFolder" HorizontalAlignment="Left" Height="39" Margin="300,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Grid.Column="1" TextChanged="OutputFolder_TextChanged"/>
+        <Button x:Name="browse1" Grid.ColumnSpan="2" Content="Browse" HorizontalAlignment="Left" Margin="705,60,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="Button_Click_2" FontFamily="Gill Sans Ultra Bold Condensed" BorderThickness="1" Foreground="White" Background="{x:Null}" BorderBrush="#FFFFFEFE" />
+        <Button x:Name="Browse2" Grid.ColumnSpan="2" Content="Browse" HorizontalAlignment="Left" Margin="708,142,0,0" VerticalAlignment="Top" Width="75" Height="42" RenderTransformOrigin="0.529,0.944" FontFamily="Gill Sans Ultra Bold" Click="Browse2_Click" Foreground="White" Background="{x:Null}" BorderBrush="#FFFFFEFE"/>
 
     </Grid>
 </Window>

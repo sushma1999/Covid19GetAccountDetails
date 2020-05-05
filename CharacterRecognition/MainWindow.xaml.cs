@@ -53,7 +53,7 @@ namespace CharacterRecognition
                         await ProcessImage(fileName);
                     }
                 }
-                MessageBox.Show("Processing of files Completed, Check the summary folder");
+                MessageBox.Show("Processing of files Completed, Check the output folder");
             }
             catch ( Exception ex)
             {
@@ -72,7 +72,7 @@ namespace CharacterRecognition
 
             //outputTextFilePath = OutputFolder.Text;
             OutputWriterSB.AppendLine("Read Image path from textbox");
-            var textRecognition = TextRecognitionMode.Handwritten;
+            var textRecognition = TextRecognitionMode.Printed;
             TextOperationResult textResult;
 
             using (Stream imageFileStream = File.OpenRead(imagepath))
@@ -224,6 +224,11 @@ namespace CharacterRecognition
                 this.OutputFolder.Text = openDialog.SelectedPath;
                 this.outputTextFilePath = openDialog.SelectedPath;
             }
+        }
+
+        private void OutputFolder_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
